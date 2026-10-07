@@ -1,0 +1,10 @@
+nav {background-color: #ffdbac}
+nav a:hover {background-color: #d92a13;}
+nav a {color: #3c2f2f;}
+
+nav a:visited {color: #008080;}
+
+nav a:hover {color: #20c0c0;}
+
+nav {padding: 10px;}
+nav {margin-bottom: 30px}
