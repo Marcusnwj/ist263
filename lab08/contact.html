@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="skills.html">Skills</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <header><h1>Contact</h1></header>
+
+    <main>
+        <!-- Row 1: address | email + LinkedIn -->
+        <div class="row row1">
+            <div class="col">
+                <h2>Address</h2>
+                <address>
+                    Marcus Jordan<br>
+                    Hinds Hall<br>
+                    Syracuse, NY 13210
+                </address>
+            </div>
+            <div class="col links">
+                <a href="mailto:mnjordan@syr.edu">mnjordan@syr.edu</a>
+                <a href="https://www.linkedin.com/"><img src="../images/linkedin.png" alt="LinkedIn logo"> My LinkedIn Profile</a>
+            </div>
+        </div>
+
+        <!-- Row 2: form | map -->
+        <div class="row row2">
+            <div class="col">
+                <form action="#" method="post">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name">
+
+                    <label>Reason for contact:</label>
+                    <input type="radio" id="office" name="reason" value="office">
+                    <label for="office" class="radio-label">Office Hours</label><br>
+                    <input type="radio" id="career" name="reason" value="career">
+                    <label for="career" class="radio-label">Career Consulting</label>
+
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Type some stuff"></textarea>
+
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+            <div class="col col2 map">
+                <iframe title="Map to 110 N Geddes St, Syracuse, NY"
+                        src="https://www.google.com/maps?q=110+N+Geddes+St,+Syracuse,+NY&amp;output=embed"
+                        loading="lazy"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <small>&copy; 2026</small>
+        <p class="tagline">&ldquo;Be comfortable in uncomfortable situations.&rdquo; &ndash; Marcus Jordan</p>
+    </footer>
+</body>
+</html>
