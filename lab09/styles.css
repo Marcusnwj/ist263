@@ -1,0 +1,242 @@
+.p2img1, .p2img2, .p2img3 {float: left; margin-right: 10px; max-width: 50%;}
+.clear {clear: both;}
+
+.part2 {display: flex;}
+.part2 article {padding: 20px;}
+.article1, .article2, .article3 {margin: 10px;}
+.article1 {flex: 2; order: 3; background-color: #cce5ff; border-radius: 1em;}
+.article2 {flex: 1; order: 2;}
+.article3 {flex: 1; order: 1;}
+
+.row {
+    display: flex;          /* makes .row the flex parent, so its two .col children sit side by side */
+    gap: 32px;              /* space between the columns */
+    padding: 30px 16px;     /* space inside the box */
+    background-color: #fff;
+    border-radius: 36px;
+}
+
+.row1 {
+    align-items: flex-end;  /* lines the links up with the bottom of the address */
+}
+
+.row1 .col {
+    flex: none;             /* each column is only as wide as its content */
+}
+
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+ 
+body {
+    margin: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.0;
+    color: #222;
+    background-color: #eee;
+}
+ 
+/* ---------- Nav / header ---------- */
+nav {
+    padding: 6px 8px;
+    color: #fff;
+    background-color: #6495ed;
+}
+ 
+nav a {
+    color: #fff;
+}
+ 
+header h1 {
+    margin: 22px 0 18px;
+    font-size: 2rem;
+}
+ 
+/* ---------- Main: stacks the two rows ---------- */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 24px 24px;
+}
+ 
+/* ---------- Rows: white rounded boxes, flex columns ---------- */
+.row {
+    display: flex;
+    gap: 32px;
+    padding: 30px 16px;
+    background-color: #fff;
+    border-radius: 36px;
+}
+ 
+.col {
+    min-width: 0;
+}
+ 
+/* ---------- Row 1: address | links ---------- */
+.row1 {
+    align-items: flex-end;
+    gap: 32px;
+    padding: 28px 16px 28px;
+}
+ 
+.row1 .col {
+    flex: none;
+}
+ 
+h2 {
+    margin: 0 0 44px;
+    font-size: 1.35rem;
+}
+ 
+address {
+    font-style: normal;
+    line-height: 1.0;
+}
+ 
+address,
+.links {
+    font-size: 14px;
+}
+ 
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    line-height: 1.0;
+}
+ 
+.links a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+ 
+.links img {
+    height: 11px;
+    width: auto;
+}
+ 
+/* ---------- Row 2: form | map ---------- */
+.row2 {
+    align-items: stretch;
+}
+ 
+.row2 .col:first-child {
+    flex: 1;
+    padding: 28px 0 0 26px;
+}
+ 
+.row2 .map {
+    flex: 1.6;
+    display: flex;
+}
+ 
+form {
+    display: flex;
+    flex-direction: column;
+}
+ 
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+ 
+form input[type="text"],
+form textarea {
+    width: 100%;
+}
+ 
+form textarea {
+    resize: vertical;
+}
+ 
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+ 
+legend {
+    padding: 0;
+    margin-top: 10px;
+    font-weight: bold;
+}
+ 
+.option {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1.1;
+}
+ 
+form .option label {
+    margin: 0;
+    font-weight: normal;
+}
+ 
+form input[type="submit"] {
+    align-self: flex-start;
+    margin-top: 2px;
+}
+ 
+/* ---------- Map fills its column ---------- */
+.map iframe {
+    flex: 1;
+    width: 100%;
+    min-height: 360px;
+    border: 0;
+}
+ 
+/* ---------- Footer ---------- */
+footer {
+    padding: 0 24px 24px;
+}
+ 
+footer .tagline {
+    margin: 8px 0 0;
+    font-style: italic;
+}
+ 
+/* ---------- Narrow screens: stack columns ---------- */
+@media (max-width: 700px) {
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+ 
+    .row2 .col:first-child {
+        padding: 0;
+    }
+}
+ 
+/* ---------- Form polish (step 11h) ---------- */
+form input[type="text"],
+form textarea {
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 6px;
+}
+ 
+form input[type="submit"] {
+    margin-top: 12px;
+    padding: 8px 24px;
+    color: #fff;
+    background-color: #6495ed;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+ 
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+    background-color: #4a78c9;}
+    .row1 { background-color: #e8f0f8; }
+.row2 { background-color: #eef4e8; }

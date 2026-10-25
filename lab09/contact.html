@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <style>
+        /* ---------- Base ---------- */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.0;
+            color: #222;
+            background-color: #eee;
+        }
+
+        /* ---------- Nav / header ---------- */
+        nav {
+            padding: 6px 8px;
+            color: #fff;
+            background-color: #6495ed;
+        }
+
+        nav a {
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 22px 0 18px;
+            font-size: 2rem;
+        }
+
+        /* ---------- Main: stacks the two rows ---------- */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 0 24px 24px;
+        }
+
+        /* ---------- Rows: white rounded boxes, flex columns ---------- */
+        .row {
+            display: flex;
+            gap: 32px;
+            padding: 30px 16px;
+            background-color: #fff;
+            border-radius: 36px;
+        }
+
+        .col {
+            min-width: 0;
+        }
+
+        /* ---------- Row 1: address | links ---------- */
+        .row1 {
+            align-items: flex-end;
+            gap: 32px;
+            padding: 28px 16px 28px;
+        }
+
+        .row1 .col {
+            flex: none;
+        }
+
+        h2 {
+            margin: 0 0 44px;
+            font-size: 1.35rem;
+        }
+
+        address {
+            font-style: normal;
+            line-height: 1.0;
+        }
+
+        address,
+        .links {
+            font-size: 14px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            line-height: 1.0;
+        }
+
+        .links a {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .links img {
+            height: 11px;
+            width: auto;
+        }
+
+        /* ---------- Row 2: form | map ---------- */
+        .row2 {
+            align-items: stretch;
+        }
+
+        .row2 .col:first-child {
+            flex: 1;
+            padding: 28px 0 0 26px;
+        }
+
+        .row2 .map {
+            flex: 1.6;
+            display: flex;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 2px;
+        }
+
+        form input[type="text"],
+        form textarea {
+            width: 100%;
+        }
+
+        form textarea {
+            resize: vertical;
+        }
+
+        fieldset {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        legend {
+            padding: 0;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            line-height: 1.1;
+        }
+
+        form .option label {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        form input[type="submit"] {
+            align-self: flex-start;
+            margin-top: 2px;
+        }
+
+        /* ---------- Map fills its column ---------- */
+        .map iframe {
+            flex: 1;
+            width: 100%;
+            min-height: 360px;
+            border: 0;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            padding: 0 24px 24px;
+        }
+
+        footer .tagline {
+            margin: 8px 0 0;
+            font-style: italic;
+        }
+
+        /* ---------- Narrow screens: stack columns ---------- */
+        @media (max-width: 700px) {
+            .row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .row2 .col:first-child {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="skills.html">Skills</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <header><h1>Contact</h1></header>
+
+    <main>
+        <!-- Row 1: address | email + LinkedIn -->
+        <div class="row row1">
+            <div class="col">
+                <h2>Address</h2>
+                <address>
+                    Marcus Jordan<br>
+                    Hinds Hall<br>
+                    Syracuse, NY 13210
+                </address>
+            </div>
+            <div class="col links">
+                <a href="mailto:mnjordan@syr.edu">mnjordan@syr.edu</a>
+                <a href="https://www.linkedin.com/"><img src="../images/linkedin.png" alt="LinkedIn logo"> My LinkedIn Profile</a>
+            </div>
+        </div>
+
+        <!-- Row 2: form | map -->
+        <div class="row row2">
+            <div class="col">
+                <form action="#" method="post">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name">
+
+                    <fieldset>
+                        <legend>Reason for contact:</legend>
+                        <div class="option">
+                            <input type="radio" id="office" name="reason" value="office">
+                            <label for="office">Office Hours</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="career" name="reason" value="career">
+                            <label for="career">Career Consulting</label>
+                        </div>
+                    </fieldset>
+
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Type some stuff"></textarea>
+
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+            <div class="col col2 map">
+                <iframe title="Map to 110 N Geddes St, Syracuse, NY"
+                        src="https://www.google.com/maps?q=110+N+Geddes+St,+Syracuse,+NY&amp;output=embed"
+                        loading="lazy"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <small>&copy; 2026</small>
+        <p class="tagline">&ldquo;Be comfortable in uncomfortable situations.&rdquo; &ndash; Marcus Jordan</p>
+    </footer>
+</body>
+</html>
