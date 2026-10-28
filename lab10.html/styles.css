@@ -1,0 +1,92 @@
+/* ===== Add/merge these into your existing style.css ===== */
+
+/* Step 5: Flexible image sizes */
+.bioimage {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Desktop navigation (links run left to right) */
+nav {
+    background-color: #6495ed;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+}
+
+/* Step 6: Contact page flexbox container (use your own class name)
+   Make the iframe a DIRECT child of this container, and move any
+   class from a wrapper div onto the iframe itself. */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Step 7: Media query for tablet and smaller (breakpoint: 768px) */
+@media screen and (max-width: 768px) {
+
+    nav {
+        text-align: left;
+        padding: 10px 15px;
+    }
+
+    /* Steps 8 & 11: stack the links, full width, with spacing */
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 15px 0 15px 0;
+        font-size: 1.3rem;
+    }
+
+    /* Highlight bar on hover/tap and on the page you're currently on */
+    nav a:hover,
+    nav a.current {
+        background-color: #696d9b;
+    }
+
+    /* Step 10: hide the pipe characters */
+    nav span {
+        display: none;
+    }
+}
+
+.bioimage {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    background-color: #6495ed;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        text-align: left;
+        padding: 10px 15px;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 1.3rem;
+    }
+
+    nav a.current,
+    nav a:hover {
+        background-color: #696d9b;
+    }
+
+    nav span {
+        display: none;
+    }
+}

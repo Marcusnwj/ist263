@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skills</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 6px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            background-color: #fde5b5;
+            border: 2px solid #1f5a8a;
+        }
+
+        /* ---------- Nav ---------- */
+        nav {
+            padding: 12px 22px;
+            background-color: #6dd0dc;
+        }
+
+        nav a {
+            color: #0b4170;
+        }
+
+        nav .sep {
+            margin: 0 18px;
+            color: #c0702a;
+        }
+
+        /* ---------- Heading: block element centered with text-align ---------- */
+        h1 {
+            margin: 22px 0 18px;
+            text-align: center;
+            font-size: 1.9rem;
+            color: #0b4170;
+        }
+
+        /* ---------- Flexbox with two containers ---------- */
+        .skillsflex {
+            display: flex;
+            align-items: center;
+            margin: 0 14px 14px;
+            padding: 28px 16px;
+            background-color: #ececea;
+            border-radius: 20px;
+        }
+
+        .skillstable {
+            flex-basis: 50%;
+        }
+
+        .skillsimage {
+            flex-basis: 50%;
+            text-align: center;      /* centers the inline image */
+        }
+
+        .skillstable table {
+            margin: 0 auto;          /* centers the table */
+        }
+
+        .skillsimage img {
+            width: 190px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ---------- Table ---------- */
+        table {
+            border: 1px solid #333;
+            color: #00695c;
+        }
+
+        th,
+        td {
+            padding: 1px 2px;
+            border: 1px solid #333;
+            text-align: left;
+        }
+
+        th {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #33e08a;
+        }
+
+        /* ---------- Narrow screens ---------- */
+        @media (max-width: 600px) {
+            .skillsflex {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a><span class="sep">|</span><a href="contact.html">Contact</a><span class="sep">|</span><a href="skills.html">Skills</a>
+    </nav>
+
+    <h1>Technical Skills</h1>
+
+    <div class="skillsflex">
+        <div class="skillstable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Category</th>
+                        <th>Skill</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Music</td><td>Bass</td></tr>
+                    <tr><td>2</td><td>Music</td><td>Tuba</td></tr>
+                    <tr><td>3</td><td>Music</td><td>Baritone</td></tr>
+                    <tr><td>4</td><td>Music</td><td>Trombone</td></tr>
+                    <tr><td>5</td><td>Coding</td><td>HTML</td></tr>
+                    <tr><td>6</td><td>Coding</td><td>CSS</td></tr>
+                    <tr><td>7</td><td>Coding</td><td>JavaScript</td></tr>
+                    <tr><td>8</td><td>Coding</td><td>PHP</td></tr>
+                    <tr><td>9</td><td>Frameworks</td><td>WordPress</td></tr>
+                    <tr><td>10</td><td>Frameworks</td><td>Drupal</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="skillsimage">
+            <img src="https://peopel-su.github.io/ist263/images/skill_3775447.png" alt="Skill gauge icon">
+        </div>
+    </div>
+</body>
+</html>
