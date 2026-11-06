@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 11</title>
+    <style>
+        .container { display:flex; }
+        #first { order:1; }
+        #second { order:2; }
+        #third { order:3; }
+        :root { --bg:#fdf6e9; --fg:#2b2118; --accent:#8a5a2b; }
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) { --bg:#1d1812; --fg:#f2e8d8; --accent:#d9b27c; }
+        }
+        :root[data-theme="dark"] { --bg:#1d1812; --fg:#f2e8d8; --accent:#d9b27c; }
+        body { background:var(--bg); color:var(--fg); font-family:Georgia, 'Times New Roman', serif; text-align:center; margin:0; padding:1rem; }
+        h1 { color:var(--accent); }
+        img { width:140px; max-width:28vw; cursor:pointer; }
+    </style>
+    <animate class="css"></animate>
+    <script>
+        function WinnerMessage () {
+            alert('You Won!');
+        }
+        function TryAgain () {
+            alert('Wrong Shell - Try Again');
+        }
+        function shuffleShells () {document.getElementById("first").style.order = Math.floor(Math.random() * 3) + 2
+        }
+    </script>
+</head>
+<body>
+    <h1>Choose a Walnut</h1>
+    <div class="container">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMjAgMTIwJz48ZGVmcz48cmFkaWFsR3JhZGllbnQgaWQ9J2cnIGN4PSc0MCUnIGN5PSczNSUnIHI9JzcwJSc+PHN0b3Agb2Zmc2V0PScwJyBzdG9wLWNvbG9yPScjZDliMjdjJy8+PHN0b3Agb2Zmc2V0PScxJyBzdG9wLWNvbG9yPScjOGE1YTJiJy8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGVsbGlwc2UgY3g9JzYwJyBjeT0nMTEyJyByeD0nNDAnIHJ5PSc2JyBmaWxsPSdyZ2JhKDAsMCwwLDAuMjUpJy8+PHBhdGggZD0nTTYwIDhDMjggOCAxMCAzOCAxNCA3MmMzIDI2IDI0IDQwIDQ2IDQwczQzLTE0IDQ2LTQwQzExMCAzOCA5MiA4IDYwIDhaJyBmaWxsPSd1cmwoI2cpJyBzdHJva2U9JyM1YzNhMTgnIHN0cm9rZS13aWR0aD0nMycvPjxwYXRoIGQ9J002MCAxMEM1NCA0MCA2NiA3MCA2MCAxMTAnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzVjM2ExOCcgc3Ryb2tlLXdpZHRoPSczJy8+PHBhdGggZD0nTTMwIDQwcTEwIDEwIDQgMjRNOTAgNDBxLTEwIDEwLTQgMjRNMzYgODJxMTIgNiAyMCAwTTY0IDgycTEyIDYgMjAgMCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjNmI0NDIwJyBzdHJva2Utd2lkdGg9JzIuNScgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJy8+PC9zdmc+" alt="first walnut" class="first" onclick="WinnerMessage();">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMjAgMTIwJz48ZGVmcz48cmFkaWFsR3JhZGllbnQgaWQ9J2cnIGN4PSc0MCUnIGN5PSczNSUnIHI9JzcwJSc+PHN0b3Agb2Zmc2V0PScwJyBzdG9wLWNvbG9yPScjZDliMjdjJy8+PHN0b3Agb2Zmc2V0PScxJyBzdG9wLWNvbG9yPScjOGE1YTJiJy8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGVsbGlwc2UgY3g9JzYwJyBjeT0nMTEyJyByeD0nNDAnIHJ5PSc2JyBmaWxsPSdyZ2JhKDAsMCwwLDAuMjUpJy8+PHBhdGggZD0nTTYwIDhDMjggOCAxMCAzOCAxNCA3MmMzIDI2IDI0IDQwIDQ2IDQwczQzLTE0IDQ2LTQwQzExMCAzOCA5MiA4IDYwIDhaJyBmaWxsPSd1cmwoI2cpJyBzdHJva2U9JyM1YzNhMTgnIHN0cm9rZS13aWR0aD0nMycvPjxwYXRoIGQ9J002MCAxMEM1NCA0MCA2NiA3MCA2MCAxMTAnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzVjM2ExOCcgc3Ryb2tlLXdpZHRoPSczJy8+PHBhdGggZD0nTTMwIDQwcTEwIDEwIDQgMjRNOTAgNDBxLTEwIDEwLTQgMjRNMzYgODJxMTIgNiAyMCAwTTY0IDgycTEyIDYgMjAgMCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjNmI0NDIwJyBzdHJva2Utd2lkdGg9JzIuNScgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJy8+PC9zdmc+" alt="second walnut" class="second" onclick="TryAgain();">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMjAgMTIwJz48ZGVmcz48cmFkaWFsR3JhZGllbnQgaWQ9J2cnIGN4PSc0MCUnIGN5PSczNSUnIHI9JzcwJSc+PHN0b3Agb2Zmc2V0PScwJyBzdG9wLWNvbG9yPScjZDliMjdjJy8+PHN0b3Agb2Zmc2V0PScxJyBzdG9wLWNvbG9yPScjOGE1YTJiJy8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGVsbGlwc2UgY3g9JzYwJyBjeT0nMTEyJyByeD0nNDAnIHJ5PSc2JyBmaWxsPSdyZ2JhKDAsMCwwLDAuMjUpJy8+PHBhdGggZD0nTTYwIDhDMjggOCAxMCAzOCAxNCA3MmMzIDI2IDI0IDQwIDQ2IDQwczQzLTE0IDQ2LTQwQzExMCAzOCA5MiA4IDYwIDhaJyBmaWxsPSd1cmwoI2cpJyBzdHJva2U9JyM1YzNhMTgnIHN0cm9rZS13aWR0aD0nMycvPjxwYXRoIGQ9J002MCAxMEM1NCA0MCA2NiA3MCA2MCAxMTAnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzVjM2ExOCcgc3Ryb2tlLXdpZHRoPSczJy8+PHBhdGggZD0nTTMwIDQwcTEwIDEwIDQgMjRNOTAgNDBxLTEwIDEwLTQgMjRNMzYgODJxMTIgNiAyMCAwTTY0IDgycTEyIDYgMjAgMCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjNmI0NDIwJyBzdHJva2Utd2lkdGg9JzIuNScgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJy8+PC9zdmc+" alt="third walnut" class="third" onclick="TryAgain();">
+    </div>
+    <body onload="shuffleShells();">
+</body>
+</html>
