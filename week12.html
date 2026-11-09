@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More JavaScript</title>
+    <style>
+      #first {color: #FF0000;}
+    </style>
+    <script>
+        function wrongAnswer() {
+            document.getElementById("wrong").innerHTML = "<span style='color:red;'> True is the Wrong Answer! </span>";
+        }
+        function rightAnswer() {
+            document.getElementById("correct").innerHTML = "<span style='color:green;'> False is the Correct Answer! </span>";
+        }
+        function change() {
+            var arrow = document.getElementById("arrow").setAttribute("src", "https://peopel-su.github.io/ist263/images/arrow_over.png")
+        }
+        function changeBack() {
+            var arrow = document.getElementById("arrow").setAttribute("src", "https://peopel-su.github.io/ist263/images/arrow.png")
+        }
+        function colorChange () {
+          document.getElementById("first").style.color = "#000000";
+        }
+
+    </script>
+   
+</head>
+<body>
+    <h1 id="first"> Header</h1>
+    <h1> My JavaScript Quiz</h1>
+    <p>Java and JavaScript are the same thing</p>
+    <button onclick="wrongAnswer()" id="wrong">True</button>
+    <p id="wrong"></p>
+    <button onclick="rightAnswer()" id="correct">False</button>
+    <p id="correct"></p>
+     <img id = "arrow" src ="https://peopel-su.github.io/ist263/images/arrow.png" alt="arrow icon" onmouseover="change()" onmouseout="changeBack()" onclick="colorChange()">
+
+</body>
+
+</html>
