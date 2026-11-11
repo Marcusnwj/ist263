@@ -16,9 +16,12 @@
             background-color: #000000;
             width: 1200px;
             margin: auto;
-          
+            /* margin auto is centering this container */
         }
 
+        #bigimages {
+            margin-right: 100px;
+        }
 
         #planetinfo {
             padding: 100px;
@@ -30,6 +33,7 @@
             padding-top: 20px;
         }
 
+        /* ^^ margin auto is centering this container */
         #mercurythumb,
         #venusthumb,
         #earththumb,
@@ -41,20 +45,90 @@
             width: 100px;
         }
 
+        /* ---- Step 1: hide every planet image and text except Mercury ---- */
         #venus, #earth, #mars, #jupiter, #saturn, #uranus, #neptune,
         #venusinfo, #earthinfo, #marsinfo, #jupiterinfo, #saturninfo, #uranusinfo, #neptuneinfo {
             display: none;
         }
 
-    
+        /* ---- Step 2: layout with floats (parent containers) ---- */
+        /* Two columns: large image on the left, text always directly to its right.
+           Text is vertically centered with the image and center-aligned.
+           Thumbnails span both columns underneath. */
         #slideshow-container {
             display: grid;
-            grid-template-columns: auto 1fr;
-          
+            grid-template-columns: 55% 1fr;
+            align-items: center;
+        }
+
+        /* ---- Scaling: fit the whole slideshow inside the browser window ---- */
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #slideshow-container {
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
+        }
+
+        #bigimages {
+            margin-right: 0;
+            min-width: 0;
+        }
+
+        /* image scales with column width but never taller than the window allows */
+        #bigimages img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: calc(100vh - 170px);
+            object-fit: contain;
+        }
+
+        #planetinfo {
+            min-width: 0;
+            box-sizing: border-box;
+            padding: 0 clamp(16px, 4vw, 70px);
+            text-align: center;
+        }
+
+        #planetinfo h1 {
+            font-size: clamp(22px, 3vw, 36px);
+        }
+
+        #planetinfo h2 {
+            font-size: clamp(18px, 2.2vw, 28px);
+        }
+
+        #planetinfo p {
+            font-size: clamp(13px, 1.3vw, 18px);
+            line-height: 1.5;
         }
 
         #thumbnails {
             grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            width: auto;
+            max-width: 100%;
+            padding: 12px 10px;
+            box-sizing: border-box;
+        }
+
+        #thumbnails img {
+            width: clamp(40px, 7vw, 90px);
+            height: auto;
+            cursor: pointer;
         }
     </style>
     <script>
