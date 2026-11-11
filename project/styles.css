@@ -1,0 +1,275 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 32px 40px;
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #111;
+}
+
+header,
+main,
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+hr {
+  max-width: 960px;
+  margin: 24px auto;
+  border: 0;
+
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0;
+}
+
+
+nav a {
+  font-size: 0.8rem;
+  padding: 8px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: #222;
+  color: #fff;
+}
+
+
+nav form {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+ 
+}
+
+nav label {
+  white-space: nowrap;
+}
+
+nav input[type="search"] {
+  width: 90px;
+  font: inherit;
+  padding: 2px 4px;
+
+}
+
+nav button {
+  font: inherit;
+  padding: 2px 8px;
+
+  background: #fff;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: #222;
+  color: #fff;
+}
+
+main > section:first-child h1 {
+  margin: 0 0 20px;
+  padding: 36px 24px;
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+main > section:first-child p {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+}
+
+main > section:first-child img {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 12px;
+
+}
+
+
+section {
+  margin-top: 28px;
+}
+
+
+#lures h2,
+#equipment h2 {
+  display: inline-block;
+  margin: 0 0 20px;
+  padding: 18px 12px;
+ 
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+#land-vs-sea h2,
+#species h2 {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+#lures table,
+#equipment table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 28px 36px;
+  margin: -28px -28px; 
+  width: calc(100% + 56px);
+}
+
+#lures td,
+#equipment td {
+  vertical-align: top;
+  text-align: center;
+  padding: 12px;
+
+}
+
+#lures td img,
+#equipment td img {
+  width: 100%;
+  max-width: 250px;
+  height: 170px;
+  margin: 0 auto 10px;
+  object-fit: contain;
+}
+
+#lures h3,
+#equipment h3 {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+#lures td p,
+#equipment td p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+#land-vs-sea table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 24px 0;
+  margin: 0 -24px;
+  width: calc(100% + 48px);
+}
+
+#land-vs-sea td {
+  vertical-align: top;
+  padding: 0;
+}
+
+#land-vs-sea td:last-child {
+  padding-top: 8px;
+}
+
+#land-vs-sea figure {
+  margin: 0;
+}
+
+#land-vs-sea figure img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+
+}
+
+#land-vs-sea figcaption {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+#species ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+#species li {
+  margin-bottom: 6px;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+footer h2 {
+  margin: 16px 0 8px;
+  font-size: 1rem;
+}
+
+footer ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+footer a {
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 16px;
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+
+  #lures table,
+  #equipment table,
+  #land-vs-sea table {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  #lures tr,
+  #equipment tr,
+  #land-vs-sea tr {
+    display: block;
+  }
+
+  #lures td,
+  #equipment td {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  #land-vs-sea td {
+    display: block;
+    margin-bottom: 16px;
+    padding-top: 0;
+  }
+}
